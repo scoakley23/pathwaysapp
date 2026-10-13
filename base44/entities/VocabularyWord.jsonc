@@ -1,0 +1,18 @@
+{
+  "name": "VocabularyWord",
+  "type": "object",
+  "properties": {
+    "word": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "word"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "InterviewQuestion",
+  "type": "object",
+  "properties": {
+    "section": {
+      "type": "string",
+      "enum": [
+        "small_talk",
+        "personal_info",
+        "morals_ethics",
+        "oath_requirements"
+      ],
+      "description": "Interview section category"
+    },
+    "question": {
+      "type": "string",
+      "description": "The interview question"
+    },
+    "expected_response": {
+      "type": "string",
+      "description": "Expected or sample correct response"
+    },
+    "response_type": {
+      "type": "string",
+      "enum": [
+        "open_ended",
+        "yes_no",
+        "specific_answer"
+      ],
+      "default": "specific_answer"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order within section"
+    },
+    "tips": {
+      "type": "string",
+      "description": "Helpful tips for answering"
+    }
+  },
+  "required": [
+    "section",
+    "question",
+    "expected_response"
+  ]
+}

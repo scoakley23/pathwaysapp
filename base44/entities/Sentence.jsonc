@@ -1,0 +1,33 @@
+{
+  "name": "Sentence",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "The sentence content"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Civics",
+        "History",
+        "Government",
+        "Geography",
+        "Holidays"
+      ],
+      "default": "Civics"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "easy"
+    }
+  },
+  "required": [
+    "text"
+  ]
+}

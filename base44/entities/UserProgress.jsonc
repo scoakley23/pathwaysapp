@@ -1,0 +1,80 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "content_id": {
+      "type": "string",
+      "description": "ID of the sentence, word, or question"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "sentence",
+        "vocabulary",
+        "civics_question"
+      ],
+      "default": "sentence"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "practicing",
+        "mastered"
+      ],
+      "default": "practicing"
+    },
+    "last_practiced": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "assignment_id": {
+      "type": "string",
+      "description": "Optional ID of the assignment this progress fulfills"
+    },
+    "ease_factor": {
+      "type": "number",
+      "default": 2.5,
+      "description": "SRS Ease Factor (SM-2 algorithm)"
+    },
+    "interval": {
+      "type": "number",
+      "default": 0,
+      "description": "Current interval in days between repetitions"
+    },
+    "consecutive_correct": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times answered correctly in a row"
+    },
+    "last_result": {
+      "type": "string",
+      "enum": [
+        "correct",
+        "incorrect"
+      ],
+      "description": "Result of the last practice session"
+    },
+    "best_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Best accuracy score (0-100)"
+    },
+    "last_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Most recent accuracy score (0-100)"
+    },
+    "total_attempts": {
+      "type": "number",
+      "default": 0,
+      "description": "Total number of practice attempts for this content item"
+    }
+  },
+  "required": [
+    "user_email",
+    "content_id"
+  ]
+}

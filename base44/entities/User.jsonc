@@ -1,0 +1,37 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "display_name": {
+      "type": "string",
+      "description": "User's public display name"
+    },
+    "points": {
+      "type": "number",
+      "default": 0,
+      "description": "Gamification points"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "List of earned badge IDs"
+    },
+    "max_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Highest daily streak achieved"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Scheduled citizenship test date"
+    }
+  },
+  "required": [
+    "display_name",
+    "test_date"
+  ]
+}

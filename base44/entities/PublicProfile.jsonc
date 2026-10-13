@@ -1,0 +1,49 @@
+{
+  "name": "PublicProfile",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "points": {
+      "type": "number",
+      "default": 0
+    },
+    "badges_count": {
+      "type": "number",
+      "default": 0
+    },
+    "invite_code": {
+      "type": "string",
+      "description": "Unique code for students to join this tutor's class"
+    },
+    "account_type": {
+      "type": "string",
+      "enum": [
+        "student",
+        "tutor"
+      ],
+      "default": "student",
+      "description": "User's selected role in the app"
+    },
+    "zip_code": {
+      "type": "string",
+      "description": "User's zip code for representative lookup"
+    },
+    "street_address": {
+      "type": "string",
+      "description": "Optional street address for precise congressional district lookup"
+    },
+    "representative_data": {
+      "type": "object",
+      "description": "Cached representative lookup results"
+    }
+  },
+  "required": [
+    "user_email",
+    "display_name"
+  ]
+}

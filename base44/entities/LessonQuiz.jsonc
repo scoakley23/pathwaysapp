@@ -1,0 +1,35 @@
+{
+  "name": "LessonQuiz",
+  "type": "object",
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "description": "ID of the associated lesson"
+    },
+    "question": {
+      "type": "string",
+      "description": "Quiz question"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Multiple choice options"
+    },
+    "correct_answer": {
+      "type": "string",
+      "description": "The correct answer from options"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Explanation of the correct answer"
+    }
+  },
+  "required": [
+    "lesson_id",
+    "question",
+    "options",
+    "correct_answer"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Lesson",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "enum": [
+        "Principles of American Democracy",
+        "System of Government",
+        "Rights and Responsibilities",
+        "U.S. History",
+        "Geography and Symbols"
+      ],
+      "description": "Main topic category"
+    },
+    "title": {
+      "type": "string",
+      "description": "Lesson title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief lesson description"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "YouTube video URL or embed link"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main lesson text content"
+    },
+    "key_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The key point text"
+          },
+          "definition": {
+            "type": "string",
+            "description": "Optional definition or explanation"
+          },
+          "image_url": {
+            "type": "string",
+            "description": "Optional image URL related to this point"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "description": "Key points with optional definitions and images"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order within topic"
+    }
+  },
+  "required": [
+    "topic",
+    "title",
+    "content"
+  ]
+}

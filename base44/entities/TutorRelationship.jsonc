@@ -1,0 +1,31 @@
+{
+  "name": "TutorRelationship",
+  "type": "object",
+  "properties": {
+    "tutor_email": {
+      "type": "string",
+      "description": "Email of the tutor"
+    },
+    "student_email": {
+      "type": "string",
+      "description": "Email of the student"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "active",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "created_by": {
+      "type": "string",
+      "description": "Email of person who created the relationship (tutor or student)"
+    }
+  },
+  "required": [
+    "tutor_email",
+    "student_email"
+  ]
+}

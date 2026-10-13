@@ -1,0 +1,36 @@
+{
+  "name": "CivicsQuestion",
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "enum": [
+        "2008",
+        "2025"
+      ],
+      "default": "2008"
+    },
+    "category": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "medium"
+    }
+  },
+  "required": [
+    "question",
+    "answer"
+  ]
+}

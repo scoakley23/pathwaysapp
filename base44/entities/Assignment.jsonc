@@ -1,0 +1,70 @@
+{
+  "name": "Assignment",
+  "type": "object",
+  "properties": {
+    "tutor_email": {
+      "type": "string"
+    },
+    "student_email": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "sentence",
+        "vocabulary",
+        "civics_question",
+        "custom"
+      ]
+    },
+    "content_id": {
+      "type": "string"
+    },
+    "custom_content": {
+      "type": "string",
+      "description": "Text for custom assignment if content_type is custom (legacy)"
+    },
+    "custom_type": {
+      "type": "string",
+      "enum": [
+        "sentence",
+        "vocabulary",
+        "civics_question"
+      ],
+      "description": "Sub-type for custom assignments"
+    },
+    "custom_data": {
+      "type": "object",
+      "description": "Structured data for custom assignments (e.g. {word, definition} or {question, answer})"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed"
+      ],
+      "default": "pending"
+    },
+    "assigned_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tutor_feedback": {
+      "type": "string",
+      "description": "Feedback provided by the tutor after completion"
+    },
+    "feedback_date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "tutor_email",
+    "student_email",
+    "content_type"
+  ]
+}

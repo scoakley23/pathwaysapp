@@ -1,0 +1,27 @@
+{
+  "name": "LessonNotes",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "lesson_id": {
+      "type": "string"
+    },
+    "lesson_title": {
+      "type": "string"
+    },
+    "lesson_topic": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "Rich text HTML content of the note"
+    }
+  },
+  "required": [
+    "user_email",
+    "lesson_id",
+    "content"
+  ]
+}

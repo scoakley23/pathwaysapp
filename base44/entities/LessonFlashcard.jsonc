@@ -1,0 +1,27 @@
+{
+  "name": "LessonFlashcard",
+  "type": "object",
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "description": "ID of the associated lesson"
+    },
+    "term": {
+      "type": "string",
+      "description": "Key term or concept"
+    },
+    "definition": {
+      "type": "string",
+      "description": "Definition or explanation of the term"
+    },
+    "example": {
+      "type": "string",
+      "description": "Example or additional context"
+    }
+  },
+  "required": [
+    "lesson_id",
+    "term",
+    "definition"
+  ]
+}

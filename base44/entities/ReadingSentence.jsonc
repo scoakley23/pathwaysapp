@@ -1,0 +1,22 @@
+{
+  "name": "ReadingSentence",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "The sentence to be read aloud"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "easy"
+    }
+  },
+  "required": [
+    "text"
+  ]
+}

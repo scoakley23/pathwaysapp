@@ -1,0 +1,56 @@
+{
+  "name": "LessonProgress",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "lesson_id": {
+      "type": "string",
+      "description": "ID of the lesson"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Topic category for aggregation"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether lesson content was viewed"
+    },
+    "quiz_attempts": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of quiz attempts"
+    },
+    "best_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Best quiz score (0-100)"
+    },
+    "last_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Most recent quiz score"
+    },
+    "total_questions": {
+      "type": "number",
+      "default": 0
+    },
+    "last_attempt_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "needs_review": {
+      "type": "boolean",
+      "default": false,
+      "description": "Flagged for review if performance is weak"
+    }
+  },
+  "required": [
+    "user_email",
+    "lesson_id",
+    "topic"
+  ]
+}
